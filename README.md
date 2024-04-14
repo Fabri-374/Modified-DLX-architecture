@@ -26,7 +26,6 @@ For more detailed information about the project structure, enhancements, and oth
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Authors
-- Your Name
-
-## Acknowledgments
-- Acknowledge any contributors or sources of inspiration.
+- Fabrizio Cavallone
+- Jessica Marossero
+- Federico Tartaglia

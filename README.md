@@ -1,4 +1,4 @@
-# Modified DLX Architecture
+# Modified-DLX-Architecture
 
 ## Project Overview
 During this project, we developed and implemented the Integer Unit of the DLX architecture, incorporating several significant enhancements. These improvements include an extended instruction set, a hardwired control unit, an advanced datapath, and a highly efficient multiplication unit. The upgraded Integer Unit is designed with advanced capabilities such as data forwarding, hazard detection, and stall management to optimize overall system performance. The development process involved detailed simulations, synthesis, and place & route, culminating in the final layout of the component.

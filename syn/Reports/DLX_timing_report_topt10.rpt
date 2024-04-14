@@ -1,0 +1,270 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX
+Version: S-2021.06-SP4
+Date   : Sat Sep 16 15:56:18 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: datapath_inst/forwarding_unit_inst/CLK_r_REG623_S1
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: datapath_inst/Execution_unit_inst/MULT/RCA_INST_3/FAI_23/CLK_r_REG193_S11
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX                5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  datapath_inst/forwarding_unit_inst/CLK_r_REG623_S1/CK (DFF_X1)
+                                                          0.00       0.00 r
+  datapath_inst/forwarding_unit_inst/CLK_r_REG623_S1/Q (DFF_X1)
+                                                          0.22       0.22 r
+  datapath_inst/forwarding_unit_inst/SEL_FW_B[0] (FORWARDING_UNIT_NBIT5)
+                                                          0.00       0.22 r
+  datapath_inst/Execution_unit_inst/SEL_FW_B[0] (Execution_unit_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.22 r
+  datapath_inst/Execution_unit_inst/MUX_FW_ALU_MEM_B/SEL (MUX21_GEN_NBIT32_58)
+                                                          0.00       0.22 r
+  datapath_inst/Execution_unit_inst/MUX_FW_ALU_MEM_B/U1/Z (BUF_X2)
+                                                          0.19       0.41 r
+  datapath_inst/Execution_unit_inst/MUX_FW_ALU_MEM_B/U4/ZN (NAND2_X1)
+                                                          0.06       0.47 f
+  datapath_inst/Execution_unit_inst/MUX_FW_ALU_MEM_B/U5/ZN (OAI21_X1)
+                                                          0.04       0.51 r
+  datapath_inst/Execution_unit_inst/MUX_FW_ALU_MEM_B/Y[1] (MUX21_GEN_NBIT32_58)
+                                                          0.00       0.51 r
+  datapath_inst/Execution_unit_inst/MUX_FW_FIN_B/A[1] (MUX21_GEN_NBIT32_57)
+                                                          0.00       0.51 r
+  datapath_inst/Execution_unit_inst/MUX_FW_FIN_B/U3/Z (MUX2_X1)
+                                                          0.05       0.56 r
+  datapath_inst/Execution_unit_inst/MUX_FW_FIN_B/Y[1] (MUX21_GEN_NBIT32_57)
+                                                          0.00       0.56 r
+  datapath_inst/Execution_unit_inst/MUX_B_IMM/A[1] (MUX21_GEN_NBIT32_63)
+                                                          0.00       0.56 r
+  datapath_inst/Execution_unit_inst/MUX_B_IMM/U5/Z (MUX2_X1)
+                                                          0.17       0.74 r
+  datapath_inst/Execution_unit_inst/MUX_B_IMM/Y[1] (MUX21_GEN_NBIT32_63)
+                                                          0.00       0.74 r
+  datapath_inst/Execution_unit_inst/MULT/B[1] (BOOTHMUL_NBIT16)
+                                                          0.00       0.74 r
+  datapath_inst/Execution_unit_inst/MULT/U7/ZN (INV_X1)
+                                                          0.06       0.80 f
+  datapath_inst/Execution_unit_inst/MULT/U6/ZN (INV_X2)
+                                                          0.14       0.94 r
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/SEL[0] (MUX51_NBIT32_7)
+                                                          0.00       0.94 r
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/U1/ZN (AND3_X1)
+                                                          0.22       1.17 r
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/U20/ZN (AOI21_X1)
+                                                          0.11       1.28 f
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/MUX4/SEL (MUX21_GEN_NBIT32_37)
+                                                          0.00       1.28 f
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/MUX4/U32/ZN (AND2_X1)
+                                                          0.07       1.35 f
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/MUX4/Y[1] (MUX21_GEN_NBIT32_37)
+                                                          0.00       1.35 f
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/MUX5/B[1] (MUX21_GEN_NBIT32_36)
+                                                          0.00       1.35 f
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/MUX5/U31/ZN (OR2_X1)
+                                                          0.08       1.42 f
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/MUX5/Y[0] (MUX21_GEN_NBIT32_36)
+                                                          0.00       1.42 f
+  datapath_inst/Execution_unit_inst/MULT/OTH_MUX51_1/Y[0] (MUX51_NBIT32_7)
+                                                          0.00       1.42 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_1/A[0] (RCA_GEN_NBIT32_7)
+                                                          0.00       1.42 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_1/FAI_1/A (FA_288)
+                                                          0.00       1.42 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_1/FAI_1/U1/Z (XOR2_X1)
+                                                          0.08       1.50 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_1/FAI_1/U2/Z (XOR2_X1)
+                                                          0.08       1.59 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_1/FAI_1/S (FA_288)
+                                                          0.00       1.59 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_1/S[0] (RCA_GEN_NBIT32_7)
+                                                          0.00       1.59 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/B[0] (RCA_GEN_NBIT32_6)
+                                                          0.00       1.59 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_1/B (FA_256)
+                                                          0.00       1.59 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_1/U1/CO (FA_X1)
+                                                          0.10       1.68 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_1/Co (FA_256)
+                                                          0.00       1.68 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_2/Ci (FA_255)
+                                                          0.00       1.68 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_2/U1/CO (FA_X1)
+                                                          0.11       1.80 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_2/Co (FA_255)
+                                                          0.00       1.80 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_3/Ci (FA_254)
+                                                          0.00       1.80 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_3/U1/CO (FA_X1)
+                                                          0.11       1.91 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_3/Co (FA_254)
+                                                          0.00       1.91 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_4/Ci (FA_253)
+                                                          0.00       1.91 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_4/U1/CO (FA_X1)
+                                                          0.11       2.02 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_4/Co (FA_253)
+                                                          0.00       2.02 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_5/Ci (FA_252)
+                                                          0.00       2.02 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_5/U1/CO (FA_X1)
+                                                          0.11       2.13 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_5/Co (FA_252)
+                                                          0.00       2.13 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_6/Ci (FA_251)
+                                                          0.00       2.13 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_6/U1/CO (FA_X1)
+                                                          0.11       2.24 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_6/Co (FA_251)
+                                                          0.00       2.24 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_7/Ci (FA_250)
+                                                          0.00       2.24 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_7/U1/CO (FA_X1)
+                                                          0.11       2.35 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_7/Co (FA_250)
+                                                          0.00       2.35 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_8/Ci (FA_249)
+                                                          0.00       2.35 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_8/U1/CO (FA_X1)
+                                                          0.12       2.47 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_8/Co (FA_249)
+                                                          0.00       2.47 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_9/Ci (FA_248)
+                                                          0.00       2.47 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_9/U4/ZN (NAND2_X1)
+                                                          0.04       2.51 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_9/U6/ZN (NAND3_X1)
+                                                          0.04       2.55 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_9/Co (FA_248)
+                                                          0.00       2.55 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_10/Ci (FA_247)
+                                                          0.00       2.55 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_10/U1/CO (FA_X1)
+                                                          0.11       2.66 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_10/Co (FA_247)
+                                                          0.00       2.66 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_11/Ci (FA_246)
+                                                          0.00       2.66 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_11/U1/CO (FA_X1)
+                                                          0.11       2.77 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_11/Co (FA_246)
+                                                          0.00       2.77 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_12/Ci (FA_245)
+                                                          0.00       2.77 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_12/U1/CO (FA_X1)
+                                                          0.11       2.88 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_12/Co (FA_245)
+                                                          0.00       2.88 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_13/Ci (FA_244)
+                                                          0.00       2.88 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_13/U1/CO (FA_X1)
+                                                          0.12       3.00 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_13/Co (FA_244)
+                                                          0.00       3.00 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_14/Ci (FA_243)
+                                                          0.00       3.00 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_14/U4/ZN (NAND2_X1)
+                                                          0.04       3.03 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_14/U6/ZN (NAND3_X1)
+                                                          0.04       3.08 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_14/Co (FA_243)
+                                                          0.00       3.08 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_15/Ci (FA_242)
+                                                          0.00       3.08 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_15/U1/CO (FA_X1)
+                                                          0.11       3.19 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_15/Co (FA_242)
+                                                          0.00       3.19 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_16/Ci (FA_241)
+                                                          0.00       3.19 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_16/U1/CO (FA_X1)
+                                                          0.11       3.30 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_16/Co (FA_241)
+                                                          0.00       3.30 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_17/Ci (FA_240)
+                                                          0.00       3.30 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_17/U1/CO (FA_X1)
+                                                          0.11       3.41 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_17/Co (FA_240)
+                                                          0.00       3.41 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_18/Ci (FA_239)
+                                                          0.00       3.41 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_18/U1/CO (FA_X1)
+                                                          0.11       3.52 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_18/Co (FA_239)
+                                                          0.00       3.52 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_19/Ci (FA_238)
+                                                          0.00       3.52 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_19/U1/CO (FA_X1)
+                                                          0.10       3.61 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_19/Co (FA_238)
+                                                          0.00       3.61 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_20/Ci (FA_237)
+                                                          0.00       3.61 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_20/U1/CO (FA_X1)
+                                                          0.11       3.73 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_20/Co (FA_237)
+                                                          0.00       3.73 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_21/Ci (FA_236)
+                                                          0.00       3.73 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_21/U1/CO (FA_X1)
+                                                          0.11       3.84 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_21/Co (FA_236)
+                                                          0.00       3.84 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_22/Ci (FA_235)
+                                                          0.00       3.84 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_22/U1/CO (FA_X1)
+                                                          0.11       3.95 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_22/Co (FA_235)
+                                                          0.00       3.95 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_23/Ci (FA_234)
+                                                          0.00       3.95 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_23/U1/S (FA_X1)
+                                                          0.16       4.10 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/FAI_23/S (FA_234)
+                                                          0.00       4.10 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_2/S[22] (RCA_GEN_NBIT32_6)
+                                                          0.00       4.10 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_3/B[22] (RCA_GEN_NBIT32_5)
+                                                          0.00       4.10 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_3/FAI_23/B (FA_202)
+                                                          0.00       4.10 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_3/FAI_23/U5/ZN (INV_X1)
+                                                          0.03       4.13 f
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_3/FAI_23/U6/ZN (AOI22_X1)
+                                                          0.05       4.19 r
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_3/FAI_23/CLK_r_REG193_S11/D (DFF_X1)
+                                                          0.01       4.20 r
+  data arrival time                                                  4.20
+
+  clock CLK (rise edge)                                   4.46       4.46
+  clock network delay (ideal)                             0.00       4.46
+  datapath_inst/Execution_unit_inst/MULT/RCA_INST_3/FAI_23/CLK_r_REG193_S11/CK (DFF_X1)
+                                                          0.00       4.46 r
+  library setup time                                     -0.04       4.42
+  data required time                                                 4.42
+  --------------------------------------------------------------------------
+  data required time                                                 4.42
+  data arrival time                                                 -4.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+1

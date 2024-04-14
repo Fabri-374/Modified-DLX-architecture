@@ -1,0 +1,55 @@
+#SCRIPT FOR COMPILATION IN MODELSIM
+vcom "DLX_vhd/000-globals.vhd"
+#General components
+vcom "DLX_vhd/Components/fa.vhd"
+vcom "DLX_vhd/Components/rca_gen.vhd"
+vcom "DLX_vhd/Components/fd_gen.vhd"
+vcom "DLX_vhd/Components/mux21_gen.vhd"
+vcom "DLX_vhd/Components/mux41_gen.vhd"
+vcom "DLX_vhd/Components/mux61_gen.vhd"
+vcom "DLX_vhd/Components/fd_1bit.vhd" 
+vcom "DLX_vhd/Components/and2.vhd" 
+vcom "DLX_vhd/Components/xnor2.vhd" 
+vcom "DLX_vhd/Components/iv_gen.vhd" 
+vcom "DLX_vhd/Components/nand31_gen.vhd" 
+vcom "DLX_vhd/Components/nand41_gen.vhd"
+#P4 adder components
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/a.b.c.a.a-P4_ADDER.core/a.a-G.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/a.b.c.a.a-P4_ADDER.core/a.b-PG.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/a.b.c.a.a-P4_ADDER.core/a.c-PG_network.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/a.b.c.a.a-P4_ADDER.core/a-carry_gen.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/a.b.c.a.a-P4_ADDER.core/b.a-carry_select_block.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/a.b.c.a.a-P4_ADDER.core/b-sum_generator.vhd"
+#Alu components
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/a-P4_adder.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/b-T2_shifter.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/c-comparator.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/d-logicals.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a.b.c.a-ALU.core/e-decoder_alu.vhd"
+#Decode components
+vcom "DLX_vhd/a.b-DataPath.core/a.b.b-DECODE_UNIT.core/cond.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.b-DECODE_UNIT.core/zero_detector.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.b-DECODE_UNIT.core/registerfile.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.b-DECODE_UNIT.core/sign_extend.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.b-DECODE_UNIT.core/IR_decoder.vhd"
+#Execution components
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/a-alu.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/b-booth_multiplier.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.core/b.a-mux51_encoder.vhd"
+#Datapath components
+vcom "DLX_vhd/a.b-DataPath.core/a.b.a-FETCH_UNIT.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.b-DECODE_UNIT.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.c-EXECUTION_UNIT.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.d-MEMORY_UNIT.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.e-WRITE_BACK_UNIT.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.f-HAZARD_UNIT.vhd"
+vcom "DLX_vhd/a.b-DataPath.core/a.b.g-FORWARDING_UNIT.vhd"
+#DLX components
+vcom "DLX_vhd/a.a-CU_HW.vhd"
+vcom "DLX_vhd/a.b-DataPath.vhd"
+vcom "DLX_vhd/a.c-IRAM.vhd"
+vcom "DLX_vhd/a.d-DRAM.vhd"
+#DLX
+vcom "DLX_vhd/a-DLX.vhd"
+vcom "DLX_vhd/tb_dlx.vhd"
+vsim -do Simulation.do

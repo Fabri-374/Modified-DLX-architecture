@@ -1,0 +1,21 @@
+ line   address	contents
+    1  00000000  20210002	addi r1, r1, 2		; $r1 = 2
+    2  00000004  00631826	xor r3, r3, r3		; $r3 = 0
+    3  00000008          	cycle:
+    4  00000008  20630001	addi r3, r3, 1		; $r3 = 1		$r3 = 2
+    5  0000000c  28210001	subi r1, r1, 1		; $r1 = 1		$r1 = 0
+    6  00000010  1420fff4	bnez r1, cycle		; branch T		branch NT
+    7  00000014  01084026	xor r8, r8, r8		
+    8  00000018  0061202d	sge r4, r3, r1		;				$r4 = 1
+    9  0000001c  0c000014	jal final			;				jump
+   10  00000020  2108000f	addi r8, r8, 15		;							$r8 = 15
+   11  00000024  212900ff	addi r9, r9, 255	;							$r9	= 255
+   12  00000028  0800000c	j end				;							jump
+   13  0000002c  214a0001	addi r10, r10, 1	; should remain at zero value
+   14  00000030  214b0002	addi r11, r10, 2	; should remain at zero value
+   15  00000034          	final:
+   16  00000034  4be00000	jr r31				;				return
+   17  00000038          	end: 				;
+   18  00000038  216b0001	addi r11, r11, 1	;							$r11 = 1
+   19  0000003c  216c0002	addi r12, r11, 2	;							$r12 = 3
+   20  00000040  cc0d00ff	movi r13, 255		;							$r13 = 255
